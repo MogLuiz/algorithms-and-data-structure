@@ -5,14 +5,21 @@
 //   reverse('Hello!') === '!olleH'
 
 function reverse(str) {
+	// Solution 1
+
 	// return str.split("").reverse().join("")
 
-	let res = "";
+	// Solution 2
 
-	for (let i = 0; i < str.length; i++) {
-		 const char = str[i];
-		 res = char + res;
-	}
+	// let res = "";
+	// for (let i = 0; i < str.length; i++) {
+	// 	 const char = str[i];
+	// 	 res = char + res;
+	// }
+
+	// Solution 3
+
+	return str.split("").reduce((acc, currentValue) => currentValue + acc);
 
 	return res
 
@@ -53,4 +60,4 @@ describe('String Reversal', () => {
 	});
 });
 
-mocha.run();
+mocha.run();''
