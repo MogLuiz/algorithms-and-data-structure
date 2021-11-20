@@ -5,10 +5,20 @@
 //   reverse('Hello!') === '!olleH'
 
 function reverse(str) {
-	return str.split("").reverse().join("")
+	// return str.split("").reverse().join("")
+
+	let res = "";
+
+	for (let i = 0; i < str.length; i++) {
+		 const char = str[i];
+		 res = char + res;
+	}
+
+	return res
+
 }
 
-reverse("Luiz")
+
 
 // _________ _______  _______ _________   _______  _______  _______  _______  _______
 // \__   __/(  ____ \(  ____ \\__   __/  (  ____ \(  ___  )(  ____ \(  ____ \(  ____ \
