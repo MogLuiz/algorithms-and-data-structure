@@ -26,10 +26,23 @@ function palindrome(str) {
 
 
   // Solution 03
+  // str = str.toLowerCase()
+
+  // return str === str.split("").reverse().join("")
+
+  
+  // Solution 04
   str = str.toLowerCase()
 
-  return str === str.split("").reverse().join("")
- 
+  let iterationLength = str.length % 2  === 0 ? str.length / 2 : (str.length / 2) - 1
+
+  for(let i = 0, j = str.length - 1; i < iterationLength; i++, j--) {
+    const frontChar = str[i]
+    const backChar = str[j]
+
+    if(frontChar !== backChar) return false
+  }
+  return true
 }
 
 // _________ _______  _______ _________   _______  _______  _______  _______  _______
