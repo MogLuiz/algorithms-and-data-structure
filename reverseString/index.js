@@ -21,8 +21,6 @@ function reverse(str) {
 
 	return str.split("").reduce((acc, currentValue) => currentValue + acc);
 
-	return res
-
 }
 
 
