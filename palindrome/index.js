@@ -6,19 +6,29 @@
 //   palindrome("love") === false
 
 function palindrome(str) {
+
+  // Solution 01
   // const reverse = str.replace(/ /g, "").split("").reverse()
 
   // if(reverse.join("") === str) return true
 
   // return false
 
+
+  // Solution 02
+  // str = str.toLowerCase()
+
+  // const reversed = str.split("").reverse().join("")
+
+  // if (str === reversed) return true
+
+  // return false
+
+
+  // Solution 03
   str = str.toLowerCase()
 
-  const reversed = str.split("").reverse().join("")
-
-  if (str === reversed) return true
-
-  return false
+  return str === str.split("").reverse().join("")
  
 }
 
